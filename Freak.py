@@ -8,7 +8,7 @@ while True:
     os.system("sudo apt update && sudo apt install -y python3")
     os.system("sudo git clone https://github.com/palahsu/DDoS-Ripper.git")
     os.system("clear")
-    full_path = "FreakForLinux/DDoS-Ripper"
+    full_path = os.path.join(os.getcwd(), "DDoS-Ripper")
     os.chdir(full_path)
     print("███████╗██████╗░███████╗░█████╗░██╗░░██╗")
     print("██╔════╝██╔══██╗██╔════╝██╔══██╗██║░██╔╝")
