@@ -7,9 +7,9 @@ while True:
     os.system("sudo apt update && sudo apt install -y python")
     os.system("sudo apt update && sudo apt install -y python3")
     os.system("sudo git clone https://github.com/palahsu/DDoS-Ripper.git")
+    os.system("clear")
     full_path = "/home/FreakForLinux/DDoS-Ripper"
     os.chdir(full_path)
-    os.system("clear")
     print("███████╗██████╗░███████╗░█████╗░██╗░░██╗")
     print("██╔════╝██╔══██╗██╔════╝██╔══██╗██║░██╔╝")
     print("█████╗░░██████╔╝█████╗░░███████║█████═╝░")
