@@ -4,3 +4,6 @@
 4. cd FreakForLinux
 5. python3 Freak.py
 6. Enjoy!
+
+DISCLAIMER!
+  Dont try to use the tool in termux kali because you have no root priviliges.
