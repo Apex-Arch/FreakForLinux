@@ -26,10 +26,15 @@ while True:
     freakchoice = int(input(">>> "))
     if freakchoice == 4:
         os.system("sudo apt update && sudo apt install -y nmap")
+        os.system("clear")
         os.system("sudo apt update && sudo apt install -y git")
+        os.system("clear")
         os.system("sudo apt update && sudo apt install -y wget")
+        os.system("clear")
         os.system("sudo apt update && sudo apt install -y python")
+        os.system("clear")
         os.system("sudo apt update && sudo apt install -y python3")
+        os.system("clear")
     elif freakchoice == 1:
         IP = input("TARGET IP: ")
         METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
