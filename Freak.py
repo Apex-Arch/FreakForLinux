@@ -36,7 +36,7 @@ while True:
     print("2. DDoS (DDoS Ripper)")
     print("3. Zphisher")
     print("98. Update dependencies")
-    print("99. Update Freak")
+    print("99. Update Frsaddsadd")
     freakchoice = int(input(">>> "))
     if freakchoice == 98:
         os.system("clear")
