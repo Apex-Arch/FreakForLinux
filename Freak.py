@@ -34,7 +34,9 @@ while True:
         os.system("sudo apt update && sudo apt install -y python")
         os.system("clear")
         os.system("sudo apt update && sudo apt install -y python3")
-        os.system("clear")
+        while True:
+            os.system("clear")
+        break
     elif freakchoice == 1:
         IP = input("TARGET IP: ")
         METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
