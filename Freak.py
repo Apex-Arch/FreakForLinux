@@ -42,7 +42,6 @@ while True:
     print("98. Update dependencies")
     print("99. Update Freak")
     freakchoice = int(input(">>> "))
-break
     if freakchoice == 98:
         os.system("clear")
         print("[-] Updating nmap...")
@@ -87,3 +86,4 @@ break
         os.system("sudo git clone https://github.com/Apex-Arch/FreakForTermux")
         os.chdir("FreakForLinux")
         os.system("python3 Freak.py")
+    break
