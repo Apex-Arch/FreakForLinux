@@ -106,6 +106,7 @@ while True:
         os.chdir("zphisher")
         os.system("sudo chmod +x zphisher.sh")
         os.system("sudo bash zphisher.sh")
+        os.chdir(ddosripper)
     elif freakchoice == "99":
         home = os.path.expanduser("~")
         repo_path = os.path.join(home, "FreakForLinux")
