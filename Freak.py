@@ -92,7 +92,7 @@ while True:
             time.sleep(2)
     elif freakchoice == 00:
         print("[-] Exiting...")
-        time.sleep(1.5)
+        time.sleep(0.7)
         break
     else:
         print("[!] invalid input!")
