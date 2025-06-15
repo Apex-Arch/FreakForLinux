@@ -5,5 +5,6 @@
 5. python3 Freak.py
 6. Enjoy!
 
-DISCLAIMER!
-  Dont try to use the tool in termux kali because you have no root priviliges.
+DISCLAIMERS!
+  * Dont try to use the tool in termux kali because you have no root priviliges.
+  * When you use the 99 option (Updat Freak) the changes wont be sudden, you need to reopen          Freak for the changes to apply.
