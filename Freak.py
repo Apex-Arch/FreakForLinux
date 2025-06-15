@@ -92,10 +92,8 @@ while True:
 
     elif freakchoice == "1":
         IP = input("[!] IP: ")
-        print(f"  └─> target_ip = {IP}")
         time.sleep(1)
         METHOD = input("[!] SCANNING METHOD (sT, sS, Pn...): ")
-        print(f"  └─> scanning_method = {METHOD}")
         time.sleep(1)
         os.system(f"sudo nmap -{METHOD} {IP}")
         time.sleep(5)
