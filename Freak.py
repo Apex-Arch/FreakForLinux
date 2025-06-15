@@ -97,4 +97,4 @@ while True:
         break
     else:
         print("[!] invalid input!")
-        time.sleep(2)
+        time.sleep(1)
