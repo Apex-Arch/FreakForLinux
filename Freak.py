@@ -100,7 +100,7 @@ while True:
         os.system(f"python3 DRipper.py -s {IPDDOS} -p {PORTDDOS} -t 443")
     elif freakchoice == "3":
         zphisher = os.path.join(os.getcwd(), "zphisher")
-        os.chdir(zphisher)
+        os.chdir("zphisher")
         os.system("sudo chmod +x zphisher.sh")
         os.system("sudo bash zphisher.sh")
     elif freakchoice == "99":
