@@ -84,8 +84,8 @@ while True:
             subprocess.run(["sudo", "apt", "install", "--only-upgrade", "-y", pkg], check=True)
 
         print("\n[-] Update check complete. Packages are up to date.")
-    except subprocess.CalledProcessError as e:
-        print(f"[!] Error during update: {e}")
+        except subprocess.CalledProcessError as e:
+            print(f"[!] Error during update: {e}")
     elif freakchoice == 1:
         IP = input("TARGET IP: ")
         METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
