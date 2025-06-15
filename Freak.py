@@ -107,6 +107,7 @@ while True:
         os.chdir(zphisher)
         os.system("sudo chmod +x zphisher.sh")
         os.system("sudo bash zphisher.sh")
+        time.sleep(0.5)
         os.chdir(current_dir)
     elif freakchoice == "99":
         home = os.path.expanduser("~")
