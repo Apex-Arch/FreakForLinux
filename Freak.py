@@ -2,7 +2,6 @@ import os
 import time
 import subprocess
 import shutil
-# Define commands and repo paths
 tools = {
     "nmap": {"type": "apt", "package": "nmap"},
     "wget": {"type": "apt", "package": "wget"},
@@ -66,7 +65,7 @@ while True:
     print("98. Update dependencies")
     print("99. Update Freak")
     print("00. Exit")
-    freakchoice = int(input(">>> "))
+    freakchoice = input(">>> "))
     if freakchoice == 98:
         packages_to_update = ["nmap", "wget", "python3", "python", "git"]
     
