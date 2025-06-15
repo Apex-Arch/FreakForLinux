@@ -38,6 +38,7 @@ while True:
     print("3. Zphisher")
     print("98. Update dependencies")
     print("99. Update Freak")
+    print("00. Exit")
     freakchoice = int(input(">>> "))
     if freakchoice == 98:
         os.system("clear")
@@ -89,3 +90,9 @@ while True:
             os.chdir(repo_path)
             subprocess.run(["python3", "Freak.py"])
             time.sleep(2)
+    elif freakchoice == 00:
+        print("[-] Exiting...")
+        time.sleep(1.5)
+        break
+    else:
+        print("[!] invalid input!")
