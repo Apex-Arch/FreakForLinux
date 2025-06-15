@@ -91,8 +91,12 @@ while True:
             print(f"[!] Error during update: {e}")
 
     elif freakchoice == "1":
-        IP = input("TARGET IP: ")
-        METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
+        IP = input("[!] IP: ")
+        print(f"└─> target_ip = {IP}")
+        time.sleep(1)
+        METHOD = input("[!] SCANNING METHOD (sT, sS, Pn...): ")
+        print(f"└─> scanning_method = {METHOD}")
+        time.sleep(1)
         os.system(f"sudo nmap -{METHOD} {IP}")
         time.sleep(5)
     elif freakchoice == "2":
