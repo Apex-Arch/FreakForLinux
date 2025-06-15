@@ -68,27 +68,24 @@ while True:
     print("00. Exit")
     freakchoice = int(input(">>> "))
     if freakchoice == 98:
-        os.system("clear")
-        print("[-] Updating nmap...")
-        time.sleep(0.5)
-        os.system("sudo apt update && sudo apt install -y nmap")
-        os.system("clear")
-        print("[-] Updating git...")
-        time.sleep(0.5)
-        os.system("sudo apt update && sudo apt install -y git")
-        os.system("clear")
-        print("[-] Updating wget...")
-        time.sleep(0.5)
-        os.system("sudo apt update && sudo apt install -y wget")
-        os.system("clear")
-        print("[-] Updating python...")
-        time.sleep(0.5)
-        os.system("sudo apt update && sudo apt install -y python")
-        os.system("clear")
-        print("[-] Updating python3...")
-        time.sleep(0.5)
-        os.system("sudo apt update && sudo apt install -y python3")
-        os.system("clear")
+        packages_to_update = ["nmap", "wget", "python3", "python", "git"]
+
+        print("\n[-] Checking and updating the following packages if new versions exist:")
+    for pkg in packages_to_update:
+        print(f"  - {pkg}")
+
+    try:
+        print("\n[+] Updating package lists...")
+        subprocess.run(["sudo", "apt", "update"], check=True)
+
+        print("[+] Upgrading selected packages...")
+        for pkg in packages_to_update:
+            print(f"  -> Upgrading {pkg} (if available)...")
+            subprocess.run(["sudo", "apt", "install", "--only-upgrade", "-y", pkg], check=True)
+
+        print("\n[-] Update check complete. Packages are up to date.")
+    except subprocess.CalledProcessError as e:
+        print(f"[!] Error during update: {e}")
     elif freakchoice == 1:
         IP = input("TARGET IP: ")
         METHOD = input("SCAN METHOD (sT, sS, Pn...): ")
