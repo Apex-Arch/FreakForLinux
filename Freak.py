@@ -65,7 +65,7 @@ while True:
     print("98. Update dependencies")
     print("99. Update Freak")
     print("00. Exit")
-    freakchoice = input(">>> "))
+    freakchoice = input(">>> ")
     if freakchoice == 98:
         packages_to_update = ["nmap", "wget", "python3", "python", "git"]
     
