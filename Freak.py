@@ -1,6 +1,55 @@
 import os
 import time
 import subprocess
+import shutil
+# Define commands and repo paths
+tools = {
+    "nmap": {"type": "apt", "package": "nmap"},
+    "wget": {"type": "apt", "package": "wget"},
+    "DDos-Ripper": {
+        "type": "git",
+        "repo": "https://github.com/palahsu/DDoS-Ripper.git",
+        "path": "/opt/DDoS-Ripper"
+    },
+    "Zphisher": {
+        "type": "git",
+        "repo": "https://github.com/htr-tech/zphisher.git",
+        "path": "/opt/zphisher"
+    }
+}
+
+def is_installed(command):
+    return shutil.which(command) is not None
+
+def install_apt(package):
+    print(f"[+] Installing {package} via apt...")
+    subprocess.run(["sudo", "apt", "update"], check=True)
+    subprocess.run(["sudo", "apt", "install", "-y", package], check=True)
+
+def clone_repo(name, repo_url, path):
+    if os.path.isdir(path):
+        print(f"[✓] {name} is already cloned at {path}")
+    else:
+        print(f"[+] Cloning {name} from {repo_url}...")
+        subprocess.run(["sudo", "git", "clone", repo_url, path], check=True)
+
+def main():
+    for name, info in tools.items():
+        print(f"\n[?] Checking {name}...")
+        if info["type"] == "apt":
+            if is_installed(info["package"]):
+                print(f"[✓] {name} is already installed.")
+            else:
+                install_apt(info["package"])
+        elif info["type"] == "git":
+            clone_repo(name, info["repo"], info["path"])
+        else:
+            print(f"[!] Unknown type for {name}.")
+
+    print("\n[✔] All tools are installed or available.")
+
+if __name__ == "__main__":
+    main()
 os.system("clear")
 print("[-] Installing nmap...")
 time.sleep(0.5)
