@@ -102,11 +102,12 @@ while True:
         time.sleep(2)
         os.system(f"python3 DRipper.py -s {IPDDOS} -p {PORTDDOS} -t 443")
     elif freakchoice == "3":
-        zphisher = os.path.join(os.getcwd(), "zphisher")
-        os.chdir("zphisher")
+        current_dir = os.getcwd()
+        zphisher = os.path.join(current_dir, "zphisher")
+        os.chdir(zphisher)
         os.system("sudo chmod +x zphisher.sh")
         os.system("sudo bash zphisher.sh")
-        os.chdir(ddosripper)
+        os.chdir(current_dir)
     elif freakchoice == "99":
         home = os.path.expanduser("~")
         repo_path = os.path.join(home, "FreakForLinux")
