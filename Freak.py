@@ -73,6 +73,7 @@ while True:
         print("\n[-] Checking and updating the following packages if new versions exist:")
         for pkg in packages_to_update:
             print(f"  - {pkg}")
+            time.sleep(2)
     
         try:
             print("\n[+] Updating package lists...")
