@@ -68,26 +68,24 @@ while True:
     print("00. Exit")
     freakchoice = int(input(">>> "))
     if freakchoice == 98:
-    import subprocess
-
-    packages_to_update = ["nmap", "wget", "python3", "python", "git"]
-
-    print("\n[-] Checking and updating the following packages if new versions exist:")
-    for pkg in packages_to_update:
-        print(f"  - {pkg}")
-
-    try:
-        print("\n[+] Updating package lists...")
-        subprocess.run(["sudo", "apt", "update"], check=True)
-
-        print("[+] Upgrading selected packages...")
+        packages_to_update = ["nmap", "wget", "python3", "python", "git"]
+    
+        print("\n[-] Checking and updating the following packages if new versions exist:")
         for pkg in packages_to_update:
-            print(f"  -> Upgrading {pkg} (if available)...")
-            subprocess.run(["sudo", "apt", "install", "--only-upgrade", "-y", pkg], check=True)
-
-        print("\n[-] Update check complete. Packages are up to date.")
-    except subprocess.CalledProcessError as e:
-        print(f"[!] Error during update: {e}")
+            print(f"  - {pkg}")
+    
+        try:
+            print("\n[+] Updating package lists...")
+            subprocess.run(["sudo", "apt", "update"], check=True)
+    
+            print("[+] Upgrading selected packages...")
+            for pkg in packages_to_update:
+                print(f"  -> Upgrading {pkg} (if available)...")
+                subprocess.run(["sudo", "apt", "install", "--only-upgrade", "-y", pkg], check=True)
+    
+            print("\n[-] Update check complete. Packages are up to date.")
+        except subprocess.CalledProcessError as e:
+            print(f"[!] Error during update: {e}")
 
     elif freakchoice == 1:
         IP = input("TARGET IP: ")
