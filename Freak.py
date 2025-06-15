@@ -84,6 +84,7 @@ while True:
         if os.path.exists(repo_path):
             os.chdir(repo_path)
             subprocess.run(["git", "pull"])
+            time.sleep(2)
         else:
             os.chdir(home)
             subprocess.run(["git", "clone", "https://github.com/Apex-Arch/FreakForLinux.git"])
@@ -96,3 +97,4 @@ while True:
         break
     else:
         print("[!] invalid input!")
+        time.sleep(2)
