@@ -98,6 +98,7 @@ while True:
         os.system(f"sudo nmap -{METHOD} {IP}")
         time.sleep(5)
     elif freakchoice == "2":
+        os.chdir("/opt/DDoS-Ripper")
         IPDDOS = input("TARGET IP: ")
         PORTDDOS = int(input("OPEN PORT: "))
         print("Press CTRL + C to break")
