@@ -50,6 +50,7 @@ def main():
 if __name__ == "__main__":
     main()
 os.system("git clone https://github.com/htr-tech/zphisher.git")
+os.chdir("/opt/DDoS-Ripper")
 os.system("git clone https://github.com/htr-tech/zphisher.git")
 os.system("clear")
 while True:    
